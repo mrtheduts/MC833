@@ -7,5 +7,5 @@ Arch Linux:
 `$ pacman -S docker mongo-c-driver gcc`
 
 ## Todo
-- [] Terminar o Readme
-- [] Fazer o Projeto 1
+- [ ] Terminar o Readme
+- [ ] Fazer o Projeto 1
