@@ -1,0 +1,11 @@
+mongodb:
+    image: mongo
+    ports:
+        - "27017:27017"
+
+mongodb-populate:
+    build: ./mongodb-populate
+    volumes:
+        - ./jsons:/jsons
+    links:
+        - mongodb

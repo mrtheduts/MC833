@@ -1,0 +1,53 @@
+[
+    {
+        'Nome Completo' : { 'nome' : 'Lucas', 'sobrenome' : 'Teixeira Amaral' },
+        'Email' : 'lucas.amaral@globo.com',
+        'senha' : 'plaintext1',
+        'Residencia' : 'Pereiras',
+        'Formaçao Academica' : 'Psicologia',
+        'Habilidades' : 'Parapsicologia',
+        'Experiencia' : [
+            {
+                'Local' : 'Sefit',
+                'Cargo' : 'Estagiario'
+            },
+
+            {
+                'Local' : 'Bolotus',
+                'Cargo' : 'Psicologo'
+            }
+        ]
+    },
+    {
+        'Nome Completo' : { 'Nome' : 'Helena', 'Sobrenome' : 'Machado Teixeira' },
+        'Email' : 'helena.teixeira@hotmail.com',
+        'senha' : 'plaintext2',
+        'Residencia' : 'Rio Branco',
+        'Formaçao Academica' : 'Linguistica',
+        'Habilidades' : 'Ingles Antigo',
+        'Experiencia' : [
+            {
+                'Local' : 'Editora Baz',
+                'Cargo' : 'Estagiaria'
+            }
+        ]
+    },
+    {
+        'Nome Completo' : { 'Nome' : 'Pedro', 'Sobrenome' : 'Ducati Amaral' },
+        'Email' : 'pedro.amaral@gmail.com',
+        'senha' : 'plaintext3',
+        'Residencia' : 'Campinas',
+        'Formaçao Academica' : 'Psicologia',
+        'Habilidades' : 'Psicanalise',
+        'Experiencia' : [
+            {
+                'Local' : 'Jatemp',
+                'Cargo' : 'Estagiario'
+            },
+            {
+                'Local' : 'Letop',
+                'Cargo' : 'Psicologo'
+            }
+        ]
+    }
+]
