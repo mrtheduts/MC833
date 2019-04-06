@@ -4,7 +4,7 @@
         'Email' : 'lucas.amaral@globo.com',
         'senha' : 'plaintext1',
         'Residencia' : 'Pereiras',
-        'Formaçao Academica' : 'Psicologia',
+        'Formacao Academica' : 'Psicologia',
         'Habilidades' : 'Parapsicologia',
         'Experiencia' : [
             {
@@ -23,7 +23,7 @@
         'Email' : 'helena.teixeira@hotmail.com',
         'senha' : 'plaintext2',
         'Residencia' : 'Rio Branco',
-        'Formaçao Academica' : 'Linguistica',
+        'Formacao Academica' : 'Linguistica',
         'Habilidades' : 'Ingles Antigo',
         'Experiencia' : [
             {
@@ -37,7 +37,7 @@
         'Email' : 'pedro.amaral@gmail.com',
         'senha' : 'plaintext3',
         'Residencia' : 'Campinas',
-        'Formaçao Academica' : 'Psicologia',
+        'Formacao Academica' : 'Psicologia',
         'Habilidades' : 'Psicanalise',
         'Experiencia' : [
             {

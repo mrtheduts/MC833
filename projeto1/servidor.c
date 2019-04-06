@@ -10,19 +10,20 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <sys/wait.h>
 #include <signal.h>
 
-#include <bson/bson.h>
 #include <mongoc/mongoc.h>
+#include <inttypes.h>
 
 #define PORT "22222"  // Porta escolhida para a utilizacao do servidor
 
 #define BACKLOG 10	 // Quantos clientes vao esperar na fila para conectar
-#define MAXDATASIZE 1024 // Numero maximo de bytes que podem ser recebidos pelo cliente
+
+// Numero maximo de bytes que podem ser recebidos pelo cliente
+#define MAXDATASIZE 1024 
 
 // Estados possiveis para o servidor
 #define DISCONNECTED    0
@@ -41,28 +42,80 @@
 #define OPT_6           16
 #define OPT_7           17
 
-void HandleClient (int fd, mongoc_collection_t *collection) {
 
-    int num_bytes, 
-        state = DISCONNECTED;
+void send_msg(int fd, char *msg){
+
+    unsigned int size_msg;
+    char msg_with_size[10] = {0};
+
+    size_msg = strlen(msg);
+    sprintf(msg_with_size, "%u", size_msg);
+    printf("msg_w_size: %u\n", size_msg);
+
+    if (send(fd, msg_with_size, strlen(msg_with_size), 0) == -1)
+            perror("send");
+
+    printf("Msg: |%s|\n", msg);
+    if (send(fd, msg, size_msg, 0) == -1)
+            perror("send");
+    printf("Tudo enviado!\n");
+
+}
+
+char *set_initial_msg(int *state){
+
+    *state = LOGGED;
+
+    return "\n\nAs seguintes operacoes sao possiveis:\n"
+          "(1) Listar todas as pessoas formadas em um determinado curso;\n"
+          "(2) Listar as habilidades dos perfis que moram em uma determinada cidade;\n"
+          "(3) Acrescentar uma nova experiência em um perfil;\n"
+          "(4) Dado o email do perfil, retornar sua experiência;\n"
+          "(5) Listar todas as informações de todos os perfis;\n"
+          "(6) Dado o email de um perfil, retornar suas informações.\n"
+          "(7) Sair\n\n"
+          "Obs: Escrever apenas o numero correspondente e enviar com enter.\n\n"
+          "Sua opcao: \0";
+}
+
+void my_strcat(char *msg, char *str, unsigned int *msg_size){
+
+    unsigned int str_size;
+
+    str_size = strlen(str);
+
+    if (*msg_size < strlen(msg) + str_size){
+
+        *msg_size += str_size;
+        msg = realloc(msg, (*msg_size)*sizeof(char)); 
+    }
+
+    strcat(msg, str);
+}
+
+void HandleClient (int socketfd, mongoc_collection_t *collection) {
+
+    int num_bytes, state = DISCONNECTED;
+    unsigned int msg_size = MAXDATASIZE;
     char *msg, buffer[MAXDATASIZE], *email, *str;
     mongoc_cursor_t *cursor;
     bson_t *query;
+    bson_t *opts;
     const bson_t *doc;
     bool found;
+    int count;
 
     msg = (char *)calloc(MAXDATASIZE, sizeof(char));
     email = (char *)calloc(MAXDATASIZE, sizeof(char));
 
-    msg = "\nBem-vind* ao RedesBook! Faca seu login para continuar:\n\nemail: \0";
+    strcpy(msg, "\nBem-vind* ao RedesBook! Faca seu login para continuar:\n\nemail: \0");
 
+    send_msg(socketfd, msg);
 
-    if (send(fd, msg, strlen(msg), 0) == -1)
-            perror("send");
-
-    while ((num_bytes = recv(fd, buffer, MAXDATASIZE-1, 0)) > 0) {
+    while ((num_bytes = recv(socketfd, buffer, MAXDATASIZE-1, 0)) > 0) {
 
         buffer[num_bytes] = 0;
+        printf("Estado: %d\n", state);
         printf("Recebi isso: |%s|\n", buffer);
 
         found = false;
@@ -70,8 +123,10 @@ void HandleClient (int fd, mongoc_collection_t *collection) {
         if (state == DISCONNECTED) {
 
             strcpy(email, buffer);
-            msg = "senha: \0";
+            strcpy(msg, "senha: \0");
             state = VERIFY_PASSWD;
+
+            send_msg(socketfd, msg);
         }
 
         else if (state == VERIFY_PASSWD) {
@@ -82,12 +137,16 @@ void HandleClient (int fd, mongoc_collection_t *collection) {
             BSON_APPEND_UTF8 (query, "Email", email);
             BSON_APPEND_UTF8 (query, "senha", buffer);
 
-            cursor = mongoc_collection_find_with_opts(collection, query, NULL, NULL);
+            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Nome Completo",  BCON_BOOL(true), "}");
+
+            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
 
             while (mongoc_cursor_next(cursor, &doc)) {
+
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Achei: %s\n", str);
+                printf("Combinacao de %s\n", str);
+
                 bson_free(str);
             }
 
@@ -96,69 +155,171 @@ void HandleClient (int fd, mongoc_collection_t *collection) {
 
             if (found) {
 
-                msg = "\nBem-vind*!\n\nAs seguintes operacoes sao possiveis:\n(1) Listar todas as pessoas formadas em um determinado curso;\n(2) Listar as habilidades dos perfis que moram em uma determinada cidade;\n(3) Acrescentar uma nova experiência em um perfil;\n(4) Dado o email do perfil, retornar sua experiência;\n(5) Listar todas as informações de todos os perfis;\n(6) Dado o email de um perfil, retornar suas informações.\n(7) Sair\n\nObs: Escrever apenas o numero correspondente e enviar com enter.\n\nSua opcao: \0";
-                state = LOGGED;
+                strcpy(msg, "\n\nBem-vind*!\0");
+                my_strcat(msg, set_initial_msg(&state), &msg_size);
             }
 
             else {
 
-                msg = "email e/ou senha incorretos.\nemail: \0";
+                strcpy(msg, "email e/ou senha incorretos.\nemail: \0");
                 state = DISCONNECTED;
             }
 
+            send_msg(socketfd, msg);
+
         }
 
-        if (state == LOGGED){
+        else if (state == LOGGED){
 
             if (buffer[0] == '1') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 1\n");
+                strcpy(msg, "Escreva o curso que deseja saber: \0");
                 state = OPT_1;
             }
-            if (buffer[0] == '2') { 
+            else if (buffer[0] == '2') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 2\n");
+                strcpy(msg, "Escreva a cidade: \0");
                 state = OPT_2;
             }
-            if (buffer[0] == '3') { 
+            else if (buffer[0] == '3') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 3\n");
+                strcpy(msg, "Escreva o local: \0");
                 state = OPT_3;
             }
-            if (buffer[0] == '4') { 
+            else if (buffer[0] == '4') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 4\n");
+                strcpy(msg, "Escreva o email: \0");
                 state = OPT_4;
             }
-            if (buffer[0] == '5') { 
+            else if (buffer[0] == '5') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 5\n");
+                strcpy(msg, "Não sei, irmão.\0");
+                // vai ter que separar em varias mensagens
+                // sugiro usar o primeiro int pra quantas entradas voce vai mandar
+                // isso vai ser o numero de entradas no bd e o numero de mensagens
+                //
+                // ou mandar tudo numa msg soh. Arrasa, campeao
                 state = OPT_5;
             }
-            if (buffer[0] == '6') { 
+            else if (buffer[0] == '6') { 
 
-                msg = "Escreva o curso que deseja saber: \0";
+                printf("Opcao escolhida: 6\n");
+                strcpy(msg, "Escreva o email da pessoa: \0");
                 state = OPT_6;
             }
-            if (buffer[0] == '7') { 
+            else if (buffer[0] == '7') { 
 
-                msg = "Ate mais! :)\n\0";
+                printf("Opcao escolhida: 7\n");
+                strcpy(msg, "Ate mais! :)\n\0");
                 state = OPT_7;
             }
+            else {
 
+                printf("Opcao invalida!\n");
+                strcpy(msg, "Opcao invalida!\n\0");
+                my_strcat(msg, set_initial_msg(&state), &msg_size);
+            }
+
+            send_msg(socketfd, msg);
         }
 
-        if (send(fd, msg, strlen(msg), 0) == -1)
-            perror("send");
+        else if (state ==OPT_1) {
 
-        if (state == OPT_7)
+            query = bson_new();
+            BSON_APPEND_UTF8 (query, "Formacao Academica", buffer);
+
+            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
+
+            printf("Contei %d pessoas\n", count);
+
+            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Nome Completo",  BCON_BOOL(true), "}");
+
+            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+
+            msg[0] = 0;
+
+            while (mongoc_cursor_next(cursor, &doc)) {
+
+                found = true;
+                str = bson_as_canonical_extended_json (doc, NULL);
+                printf("Achei: %s\n", str);
+
+                my_strcat(msg, str, &msg_size);
+
+                bson_free(str);
+            }
+
+            bson_destroy (query);
+            mongoc_cursor_destroy (cursor);
+
+            if (!found)
+                strcpy(msg, "Ninguem se formou nesse curso! :(\n\0");
+
+            my_strcat(msg, set_initial_msg(&state), &msg_size);
+
+            send_msg(socketfd, msg);
+
+        }
+        else if (state ==OPT_2) {
+
+            query = bson_new();
+            BSON_APPEND_UTF8 (query, "Residencia", buffer);
+
+            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
+
+            printf("Contei %d pessoas\n", count);
+
+            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Experiencia",  BCON_BOOL(true), "}");
+
+            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+
+            msg[0] = 0;
+
+            while (mongoc_cursor_next(cursor, &doc)) {
+
+                found = true;
+                str = bson_as_canonical_extended_json (doc, NULL);
+                printf("Achei: %s\n", str);
+
+                my_strcat(msg, str, &msg_size);
+
+                bson_free(str);
+            }
+
+            bson_destroy (query);
+            mongoc_cursor_destroy (cursor);
+
+            if (!found)
+                strcpy(msg, "Ninguem eh dessa cidade! :(\n\0");
+
+            my_strcat(msg, set_initial_msg(&state), &msg_size);
+
+            send_msg(socketfd, msg);
+
+        }
+        else if (state ==OPT_3) {
+
+        }
+        else if (state ==OPT_4) {
+
+        }
+        else if (state ==OPT_5) {
+
+        }
+        else if (state ==OPT_6) {
+
+        }
+        else if (state == OPT_7)
             break;
 
     }
-    if (send(fd, "\0", 1, 0) == -1)
-        perror("send");
 
-    close(fd);
+    close(socketfd);
     exit(0);
 
 }
@@ -310,7 +471,11 @@ int main () {
             continue;
         }
 
-        inet_ntop(client_addr.ss_family, get_in_addr((struct sockaddr *)&client_addr), ip_string, sizeof ip_string);
+        inet_ntop(client_addr.ss_family,
+                  get_in_addr((struct sockaddr *)&client_addr),
+                              ip_string,
+                              sizeof ip_string);
+
         printf("Servidor: nova conexao de %s\n", ip_string);
 
         if (!fork()) {
