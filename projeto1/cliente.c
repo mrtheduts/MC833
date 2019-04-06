@@ -36,7 +36,10 @@ int recv_msg (int socketfd, char *buffer, unsigned int *buffer_size) {
     unsigned int new_buffer_size;
     int bytes_recv;
 
-    recv(socketfd, buffer, *buffer_size - 1, 0);
+    if ((bytes_recv = recv(socketfd, buffer, *buffer_size - 1, 0)) == 0)
+        return 0;
+    else if (bytes_recv < 0)
+        return bytes_recv;
 
     sscanf(buffer, "%u", &new_buffer_size);
 
@@ -125,7 +128,6 @@ int main (int argc, char *argv[]) {
         fgets(buffer, MAXDATASIZE, stdin);
         buffer[strlen(buffer) - 1] = 0;
         send(socketfd, buffer, strlen(buffer), 0);
-
     }
 
     if (num_bytes == -1) {
