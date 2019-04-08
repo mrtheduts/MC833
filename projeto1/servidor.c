@@ -17,6 +17,7 @@
 
 #include <mongoc/mongoc.h>
 #include <inttypes.h>
+#include <math.h>
 
 #define PORT "22222"  // Porta escolhida para a utilizacao do servidor
 
@@ -43,18 +44,19 @@
 #define OPT_7           17
 
 
-void send_msg(int fd, char *msg){
+void send_msg_inside (int fd, char *msg) {
 
     unsigned int size_msg;
     char msg_with_size[10] = {0};
 
     size_msg = strlen(msg);
     sprintf(msg_with_size, "%u", size_msg);
-    printf("msg_w_size: %u\n", size_msg);
-    printf("Msg: |%s|\n", msg);
 
     if (send(fd, msg_with_size, strlen(msg_with_size), 0) == -1)
             perror("send");
+
+    /* printf("msg_w_size: %u\n", size_msg); */
+    /* printf("Msg: ========================================================= \n|%s|\n============================================================\n", msg); */
 
     if (send(fd, msg, size_msg, 0) == -1)
             perror("send");
@@ -62,7 +64,41 @@ void send_msg(int fd, char *msg){
     printf("Tudo enviado!\n");
 }
 
-char *set_initial_msg(int *state){
+void send_msg (int fd, char *msg) {
+
+    char *pointer = NULL, buffer[MAXDATASIZE] = {0};
+    unsigned int size_msg, num_msgs = 0;
+    int i;
+
+    size_msg = strlen(msg);
+    num_msgs = ceil((float)size_msg/(float)MAXDATASIZE);
+    sprintf(buffer, "%u", num_msgs);
+    printf("Size_msg: %u, Num msgs: %u\nBuffer: |%s|\n", size_msg, num_msgs, buffer);
+
+    send(fd, buffer, strlen(buffer), 0);
+
+    for (i = size_msg, pointer = msg; i > 0; i -= (MAXDATASIZE - 1), pointer = pointer + MAXDATASIZE - 1) {
+
+        if (i > 1023) {
+
+            strncpy(buffer, pointer, 1023) ;
+            buffer[1023] = 0;
+        }
+        else {
+
+            strncpy(buffer, pointer, i);
+            buffer[i] = 0;
+        }
+
+        printf(" MSG, i: %d ==================================================\n|%s|\n", i, buffer);
+
+        send_msg_inside(fd, buffer);
+    }
+
+    printf("Tudo mandado!\n");
+}
+
+char *set_initial_msg (int *state) {
 
     *state = LOGGED;
 
@@ -78,22 +114,21 @@ char *set_initial_msg(int *state){
           "Sua opcao: \0";
 }
 
-void my_strcat(char *msg, char *str, unsigned int *msg_size){
+void my_strcat (char **msg, char *str, unsigned int *msg_size) {
 
     unsigned int str_size;
 
     str_size = strlen(str);
 
-    printf("msg_size: %d, strlen(msg): %lu, str_size: %d\n", *msg_size, strlen(msg), str_size);
 
-    if (*msg_size < strlen(msg) + str_size){
+    if (*msg_size < strlen(*msg) + str_size){
 
         (*msg_size) += str_size;
-        msg = realloc(msg, (*msg_size)*sizeof(char));
-        printf("Nova mensagem: %s\n", msg);
+        *msg = realloc(*msg, (*msg_size)*sizeof(char));
     }
 
-    strcat(msg, str);
+    strcat(*msg, str);
+
 }
 
 void HandleClient (int socketfd, mongoc_collection_t *collection) {
@@ -159,7 +194,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             if (found) {
 
                 strcpy(msg, "\n\nBem-vind*!\0");
-                my_strcat(msg, set_initial_msg(&state), &msg_size);
+                my_strcat(&msg, set_initial_msg(&state), &msg_size);
             }
 
             else {
@@ -225,7 +260,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 printf("Opcao invalida!\n");
                 strcpy(msg, "Opcao invalida!\n\0");
-                my_strcat(msg, set_initial_msg(&state), &msg_size);
+                my_strcat(&msg, set_initial_msg(&state), &msg_size);
                 send_msg(socketfd, msg);
             }
 
@@ -252,7 +287,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 str = bson_as_canonical_extended_json (doc, NULL);
                 printf("Achei: %s\n", str);
 
-                my_strcat(msg, str, &msg_size);
+                my_strcat(&msg, str, &msg_size);
 
                 bson_free(str);
             }
@@ -263,7 +298,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             if (!found)
                 strcpy(msg, "Ninguem se formou nesse curso! :(\n\0");
 
-            my_strcat(msg, set_initial_msg(&state), &msg_size);
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
 
             send_msg(socketfd, msg);
 
@@ -289,7 +324,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 str = bson_as_canonical_extended_json (doc, NULL);
                 printf("Achei: %s\n", str);
 
-                my_strcat(msg, str, &msg_size);
+                my_strcat(&msg, str, &msg_size);
 
                 bson_free(str);
             }
@@ -300,7 +335,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             if (!found)
                 strcpy(msg, "Ninguem eh dessa cidade! :(\n\0");
 
-            my_strcat(msg, set_initial_msg(&state), &msg_size);
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
 
             send_msg(socketfd, msg);
 
@@ -329,7 +364,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 str = bson_as_canonical_extended_json (doc, NULL);
                 printf("Achei: %s\n", str);
 
-                my_strcat(msg, str, &msg_size);
+                my_strcat(&msg, str, &msg_size);
 
                 bson_free(str);
             }
@@ -340,45 +375,12 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             if (!found)
                 strcpy(msg, "Ninguem com esse email! :(\n\0");
 
-            my_strcat(msg, set_initial_msg(&state), &msg_size);
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
 
             send_msg(socketfd, msg);
 
         }
-        if (state ==OPT_5) {
-
-            query = bson_new();
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
-
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
-
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
-
-            msg[0] = 0;
-
-            while (mongoc_cursor_next(cursor, &doc)) {
-
-                found = true;
-                str = bson_as_canonical_extended_json (doc, NULL);
-
-                my_strcat(msg, str, &msg_size);
-                printf("msg (%d): %s\n", msg_size,msg);
-
-                bson_free(str);
-            }
-
-            bson_destroy (query);
-            mongoc_cursor_destroy (cursor);
-
-            my_strcat(msg, set_initial_msg(&state), &msg_size);
-
-            printf("msg (%d): %s\n", msg_size,msg);
-            send_msg(socketfd, msg);
-
-        }
-        else if (state ==OPT_6) {
+        else if (state == OPT_6) {
 
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", buffer);
@@ -399,7 +401,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 str = bson_as_canonical_extended_json (doc, NULL);
                 printf("Achei: %s\n", str);
 
-                my_strcat(msg, str, &msg_size);
+                my_strcat(&msg, str, &msg_size);
 
                 bson_free(str);
             }
@@ -410,13 +412,47 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             if (!found)
                 strcpy(msg, "Ninguem com esse email! :(\n\0");
 
-            my_strcat(msg, set_initial_msg(&state), &msg_size);
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
 
             send_msg(socketfd, msg);
         }
         else if (state == OPT_7)
             break;
 
+        if (state == OPT_5) {
+
+            query = bson_new();
+            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
+
+            printf("Contei %d pessoas\n", count);
+
+            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
+
+            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+
+            msg[0] = 0;
+
+            while (mongoc_cursor_next(cursor, &doc)) {
+
+                found = true;
+                str = bson_as_canonical_extended_json (doc, NULL);
+
+                my_strcat(&msg, str, &msg_size);
+                printf("msg (%d): %s\n", msg_size,msg);
+
+                bson_free(str);
+            }
+
+            bson_destroy (query);
+            mongoc_cursor_destroy (cursor);
+
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
+
+            printf("msg (%d): %s\n", msg_size,msg);
+            send_msg(socketfd, msg);
+
+        }
+        
     }
 
     close(socketfd);

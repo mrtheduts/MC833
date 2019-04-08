@@ -31,25 +31,49 @@ void *get_in_addr (struct sockaddr *sa) {
 }
 
 // Aloca o tamanho necessario para receber a mensagem
-int recv_msg (int socketfd, char *buffer, unsigned int *buffer_size) {
+int recv_msg_inside (int socketfd, char **buffer, unsigned int *buffer_size) {
 
     unsigned int new_buffer_size;
     int bytes_recv;
 
-    if ((bytes_recv = recv(socketfd, buffer, *buffer_size - 1, 0)) == 0)
+    if ((bytes_recv = recv(socketfd, *buffer, *buffer_size - 1, 0)) == 0)
         return 0;
     else if (bytes_recv < 0)
         return bytes_recv;
 
-    sscanf(buffer, "%u", &new_buffer_size);
+    sscanf(*buffer, "%u", &new_buffer_size);
 
     if (new_buffer_size > *buffer_size) {
 
         *buffer_size = new_buffer_size;
-        buffer = realloc(buffer, sizeof(char) * (*buffer_size));
+        *buffer = realloc(*buffer, sizeof(char) * (*buffer_size));
     }
 
-    bytes_recv = recv(socketfd, buffer, *buffer_size - 1, 0);
+    bytes_recv = recv(socketfd, *buffer, *buffer_size - 1, 0);
+
+    return bytes_recv;
+}
+
+int recv_msg (int socketfd, char **buffer, unsigned int *buffer_size) {
+
+    unsigned int num_msgs, i;
+    int bytes_recv;
+    
+    if ((bytes_recv = recv(socketfd, *buffer, MAXDATASIZE - 1, 0)) == 0)
+        return 0;
+    else if (bytes_recv < 0)
+        return bytes_recv;
+
+    sscanf(*buffer, "%u", &num_msgs);
+
+    for (i = 0; i < num_msgs; i++){
+
+        if ((bytes_recv = recv_msg_inside(socketfd, buffer, buffer_size)) <= 0)
+                return bytes_recv;
+
+        (*buffer)[bytes_recv] = 0;
+        printf("%s", *buffer);
+    }
 
     return bytes_recv;
 }
@@ -120,10 +144,7 @@ int main (int argc, char *argv[]) {
     // Conectou, nao precisa dessas informacoes
     freeaddrinfo(server_info);
 
-    while((num_bytes = recv_msg(socketfd, buffer, &buffer_size)) > 0) {
-
-        buffer[num_bytes] = 0;
-        printf("%s", buffer);
+    while((num_bytes = recv_msg(socketfd, &buffer, &buffer_size)) > 0) {
 
         fgets(buffer, MAXDATASIZE, stdin);
         buffer[strlen(buffer) - 1] = 0;
