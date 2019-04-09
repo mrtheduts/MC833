@@ -132,7 +132,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
     int num_bytes, state = DISCONNECTED;
     unsigned int msg_size = MAXDATASIZE;
-    char *msg, buffer[MAXDATASIZE], *email, *str;
+    char *msg, buffer[MAXDATASIZE], email[MAXDATASIZE], local[MAXDATASIZE], *str;
     mongoc_cursor_t *cursor;
     bson_t *query;
     bson_t *opts;
@@ -140,7 +140,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
     bool found;
 
     msg = (char *)calloc(MAXDATASIZE, sizeof(char));
-    email = (char *)calloc(MAXDATASIZE, sizeof(char));
 
     strcpy(msg, "\nBem-vind* ao RedesBook! Faca seu login para continuar:\n\nemail: \0");
 
@@ -229,8 +228,13 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             else if (buffer[0] == '3') { 
 
                 printf("Opcao escolhida: 3\n");
-                strcpy(msg, "Escreva o local: \0");
+                strcpy(msg, "Escreva o local de trabalho: \0");
                 state = OPT_3;
+                send_msg(socketfd, msg);
+
+                num_bytes = recv(socketfd, local, MAXDATASIZE-1, 0);
+                local[num_bytes] = 0;
+                strcpy(msg, "Escreva o cargo: \0");
                 send_msg(socketfd, msg);
             }
             else if (buffer[0] == '4') { 
@@ -267,9 +271,13 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Formacao Academica", buffer);
 
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Nome Completo",  BCON_BOOL(true), "}");
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "Nome Completo",  BCON_BOOL(true),
+                             "}");
 
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
 
             msg[0] = 0;
 
@@ -284,6 +292,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             }
 
             bson_destroy (query);
+            bson_destroy (opts);
             mongoc_cursor_destroy (cursor);
 
             if (!found)
@@ -299,9 +308,13 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Residencia", buffer);
 
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Experiencia",  BCON_BOOL(true), "}");
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "Experiencia",  BCON_BOOL(true),
+                             "}");
 
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
 
             msg[0] = 0;
 
@@ -316,6 +329,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             }
 
             bson_destroy (query);
+            bson_destroy (opts);
             mongoc_cursor_destroy (cursor);
 
             if (!found)
@@ -328,15 +342,49 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
         }
         else if (state ==OPT_3) {
 
+            bson_t *update;
+            printf("Email: |%s|\nLocal: %s\nOcupacao: %s\n", email, local, buffer);
+
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "Nome Completo",  BCON_BOOL(true),
+                             "}");
+            query = bson_new();
+            BSON_APPEND_UTF8 (query, "Email", email);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
+
+            while (mongoc_cursor_next(cursor, &doc)) {
+
+                printf("Achei: %s\n", bson_as_canonical_extended_json (doc, NULL));
+
+            }
+
+            mongoc_cursor_destroy (cursor);
+
+            update = BCON_NEW ("$push", "{", "Experiencia", "{", "Local", local, "Cargo", buffer, "}", "}");
+
+            mongoc_collection_update(collection, MONGOC_UPDATE_NONE, query, update, NULL, NULL);
+
+            bson_destroy (query);
+            msg[0] = 0;
+
+            my_strcat(&msg, set_initial_msg(&state), &msg_size);
+
+            send_msg(socketfd, msg);
         }
         else if (state ==OPT_4) {
 
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", buffer);
 
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Experiencia",  BCON_BOOL(true), "}");
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "Experiencia",  BCON_BOOL(true),
+                             "}");
 
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
 
             msg[0] = 0;
 
@@ -351,6 +399,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             }
 
             bson_destroy (query);
+            bson_destroy (opts);
             mongoc_cursor_destroy (cursor);
 
             if (!found)
@@ -366,9 +415,13 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", buffer);
 
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "senha",  BCON_BOOL(false),
+                             "}");
 
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
 
             msg[0] = 0;
 
@@ -383,6 +436,7 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             }
 
             bson_destroy (query);
+            bson_destroy (opts);
             mongoc_cursor_destroy (cursor);
 
             if (!found)
@@ -399,9 +453,13 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
             query = bson_new();
 
-            opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
+            opts = BCON_NEW ("projection", "{",
+                                "_id", BCON_BOOL(false),
+                                "senha",  BCON_BOOL(false),
+                             "}");
 
-            cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
+            cursor = mongoc_collection_find_with_opts(collection, query,
+                                                      opts, NULL);
 
             msg[0] = 0;
 
