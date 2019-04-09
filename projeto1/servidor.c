@@ -51,48 +51,45 @@ void send_msg_inside (int fd, char *msg) {
 
     size_msg = strlen(msg);
     sprintf(msg_with_size, "%u", size_msg);
+    printf("msg_with_size: |%s|\n", msg_with_size);
 
     if (send(fd, msg_with_size, strlen(msg_with_size), 0) == -1)
             perror("send");
 
-    /* printf("msg_w_size: %u\n", size_msg); */
-    /* printf("Msg: ========================================================= \n|%s|\n============================================================\n", msg); */
+    printf("Msg: ========================================================= \n|%s|\n============================================================\n", msg);
 
     if (send(fd, msg, size_msg, 0) == -1)
             perror("send");
 
-    printf("Tudo enviado!\n");
+}
+
+    size_t digit_count(int num) {
+    return snprintf(NULL, 0, "%d", num);
 }
 
 void send_msg (int fd, char *msg) {
 
-    char *pointer = NULL, buffer[MAXDATASIZE] = {0};
-    unsigned int size_msg, num_msgs = 0;
+    char *pointer = NULL, *buffer;
+    unsigned int size_msg;
     int i;
 
     size_msg = strlen(msg);
-    num_msgs = ceil((float)size_msg/(float)MAXDATASIZE);
-    sprintf(buffer, "%u", num_msgs);
-    printf("Size_msg: %u, Num msgs: %u\nBuffer: |%s|\n", size_msg, num_msgs, buffer);
+    size_msg = size_msg + digit_count(size_msg) + 2;
+    buffer = (char *)calloc(digit_count(size_msg) + size_msg, sizeof(char));
 
-    send(fd, buffer, strlen(buffer), 0);
+    sprintf(buffer, "%u\n", size_msg);
+    strcat(buffer, msg);
 
-    for (i = size_msg, pointer = msg; i > 0; i -= (MAXDATASIZE - 1), pointer = pointer + MAXDATASIZE - 1) {
 
-        if (i > 1023) {
+    for (i = size_msg, pointer = buffer;
+         i > 0;
+         i -= (MAXDATASIZE - 1), pointer = pointer + MAXDATASIZE - 1) {
 
-            strncpy(buffer, pointer, 1023) ;
-            buffer[1023] = 0;
-        }
-        else {
+        if (i > 1023)
+            send(fd, pointer, MAXDATASIZE - 1, 0);
 
-            strncpy(buffer, pointer, i);
-            buffer[i] = 0;
-        }
-
-        printf(" MSG, i: %d ==================================================\n|%s|\n", i, buffer);
-
-        send_msg_inside(fd, buffer);
+        else
+            send(fd, pointer, i, 0);
     }
 
     printf("Tudo mandado!\n");
@@ -109,8 +106,8 @@ char *set_initial_msg (int *state) {
           "(4) Dado o email do perfil, retornar sua experiência;\n"
           "(5) Listar todas as informações de todos os perfis;\n"
           "(6) Dado o email de um perfil, retornar suas informações.\n"
-          "(7) Sair\n\n"
-          "Obs: Escrever apenas o numero correspondente e enviar com enter.\n\n"
+          "(sair) Desconecta em qualquer momento do servidor.\n\n"
+          "Obs: Escrever apenas o que se encontra entre parenteses e enviar com enter.\n\n"
           "Sua opcao: \0";
 }
 
@@ -141,7 +138,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
     bson_t *opts;
     const bson_t *doc;
     bool found;
-    int count;
 
     msg = (char *)calloc(MAXDATASIZE, sizeof(char));
     email = (char *)calloc(MAXDATASIZE, sizeof(char));
@@ -206,7 +202,14 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             send_msg(socketfd, msg);
 
         }
+        else if (strcmp(buffer, "sair") == 0) { 
 
+            printf("Opcao escolhida: sair\n");
+            strcpy(msg, "Ate mais! :)\n\0");
+            state = OPT_7;
+            send_msg(socketfd, msg);
+            shutdown(socketfd, SHUT_RDWR);
+        }
         else if (state == LOGGED){
 
             if (buffer[0] == '1') { 
@@ -249,13 +252,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 state = OPT_6;
                 send_msg(socketfd, msg);
             }
-            else if (buffer[0] == '7') { 
-
-                printf("Opcao escolhida: 7\n");
-                strcpy(msg, "Ate mais! :)\n\0");
-                state = OPT_7;
-                send_msg(socketfd, msg);
-            }
             else {
 
                 printf("Opcao invalida!\n");
@@ -271,10 +267,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Formacao Academica", buffer);
 
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
-
             opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Nome Completo",  BCON_BOOL(true), "}");
 
             cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
@@ -285,7 +277,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Achei: %s\n", str);
 
                 my_strcat(&msg, str, &msg_size);
 
@@ -308,10 +299,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Residencia", buffer);
 
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
-
             opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Experiencia",  BCON_BOOL(true), "}");
 
             cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
@@ -322,7 +309,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Achei: %s\n", str);
 
                 my_strcat(&msg, str, &msg_size);
 
@@ -348,10 +334,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", buffer);
 
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
-
             opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "Experiencia",  BCON_BOOL(true), "}");
 
             cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
@@ -362,7 +344,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Achei: %s\n", str);
 
                 my_strcat(&msg, str, &msg_size);
 
@@ -385,10 +366,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", buffer);
 
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
-
             opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
 
             cursor = mongoc_collection_find_with_opts(collection, query, opts, NULL);
@@ -399,7 +376,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Achei: %s\n", str);
 
                 my_strcat(&msg, str, &msg_size);
 
@@ -416,15 +392,12 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
             send_msg(socketfd, msg);
         }
-        else if (state == OPT_7)
+        if (state == OPT_7)
             break;
 
         if (state == OPT_5) {
 
             query = bson_new();
-            count = (int)mongoc_collection_count_documents(collection, query, NULL, NULL, NULL, NULL);
-
-            printf("Contei %d pessoas\n", count);
 
             opts = BCON_NEW ("projection", "{", "_id", BCON_BOOL(false), "senha",  BCON_BOOL(false), "}");
 
@@ -438,7 +411,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
                 str = bson_as_canonical_extended_json (doc, NULL);
 
                 my_strcat(&msg, str, &msg_size);
-                printf("msg (%d): %s\n", msg_size,msg);
 
                 bson_free(str);
             }
@@ -448,16 +420,9 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
             my_strcat(&msg, set_initial_msg(&state), &msg_size);
 
-            printf("msg (%d): %s\n", msg_size,msg);
             send_msg(socketfd, msg);
-
         }
-        
     }
-
-    close(socketfd);
-    exit(0);
-
 }
 
 void SignalChildHandler (int s) {
@@ -489,15 +454,7 @@ int main () {
     mongoc_client_t *client;
     mongoc_database_t *database;
     mongoc_collection_t *collection;
-    bson_t *command, reply, *insert;
     bson_error_t error;
-    char *str;
-    bool retval;
-    bson_oid_t oid;
-
-    mongoc_cursor_t *cursor;
-    bson_t *query;
-    const bson_t *doc;
 
     // Esperar conexões em sockfd e conectar em new_fd
     int socketfd, new_fd;
@@ -505,7 +462,7 @@ int main () {
     struct addrinfo hints, *server_info, *pointer;
     struct sockaddr_storage client_addr;
     socklen_t sin_size;
-    int rv, count;
+    int rv;
     int yes = 1;
     char ip_string[INET6_ADDRSTRLEN];
     struct sigaction signal_action;
@@ -619,6 +576,8 @@ int main () {
             close(socketfd); // filho nao precisa escutar a socket
 
             HandleClient(new_fd, collection);
+
+            printf("Servidor: conexao de %s terminada\n", ip_string);
 
             close(new_fd);
             exit(0);

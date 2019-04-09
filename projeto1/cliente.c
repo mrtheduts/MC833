@@ -30,65 +30,62 @@ void *get_in_addr (struct sockaddr *sa) {
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-// Aloca o tamanho necessario para receber a mensagem
-int recv_msg_inside (int socketfd, char **buffer, unsigned int *buffer_size) {
-
-    unsigned int new_buffer_size;
-    int bytes_recv;
-
-    if ((bytes_recv = recv(socketfd, *buffer, *buffer_size - 1, 0)) == 0)
-        return 0;
-    else if (bytes_recv < 0)
-        return bytes_recv;
-
-    sscanf(*buffer, "%u", &new_buffer_size);
-
-    if (new_buffer_size > *buffer_size) {
-
-        *buffer_size = new_buffer_size;
-        *buffer = realloc(*buffer, sizeof(char) * (*buffer_size));
-    }
-
-    bytes_recv = recv(socketfd, *buffer, *buffer_size - 1, 0);
-
-    return bytes_recv;
+size_t digit_count(int num) {
+    return snprintf(NULL, 0, "%d", num);
 }
 
-int recv_msg (int socketfd, char **buffer, unsigned int *buffer_size) {
+int recv_msg (int socketfd) {
 
-    unsigned int num_msgs, i;
-    int bytes_recv;
-    
-    if ((bytes_recv = recv(socketfd, *buffer, MAXDATASIZE - 1, 0)) == 0)
-        return 0;
-    else if (bytes_recv < 0)
-        return bytes_recv;
+    int bytes_recv_so_far = 0,
+        bytes_recv_one_msg,
+        total_bytes_to_recv = -1,
+        string_jmp;
 
-    sscanf(*buffer, "%u", &num_msgs);
+    char buffer[MAXDATASIZE] = {0};
+   
+    do{
 
-    for (i = 0; i < num_msgs; i++){
+        if (total_bytes_to_recv == -1) {
 
-        if ((bytes_recv = recv_msg_inside(socketfd, buffer, buffer_size)) <= 0)
-                return bytes_recv;
+            if ((bytes_recv_one_msg = recv(socketfd, buffer, MAXDATASIZE - 1, 0)) <= 0)
+                return bytes_recv_one_msg;
 
-        (*buffer)[bytes_recv] = 0;
-        printf("%s", *buffer);
-    }
+            sscanf(buffer, "%d", &total_bytes_to_recv);
 
-    return bytes_recv;
+            string_jmp = digit_count(total_bytes_to_recv) + 1;
+            buffer[bytes_recv_one_msg] = 0;
+
+            printf("%s", buffer + string_jmp);
+        }
+
+        else {
+
+            if ((bytes_recv_one_msg = recv(socketfd, buffer, MAXDATASIZE - 1, 0)) <= 0)
+                return bytes_recv_one_msg;
+
+            buffer[bytes_recv_one_msg] = 0;
+
+            printf("%s", buffer);
+        }
+
+
+        bytes_recv_so_far += bytes_recv_one_msg;
+
+    }while(bytes_recv_so_far < total_bytes_to_recv);
+
+
+    return bytes_recv_so_far;
 }
 
 int main (int argc, char *argv[]) {
 
     int socketfd, num_bytes;
     char *buffer;
-    unsigned int buffer_size = MAXDATASIZE, new_buffer_size = 0;
+    unsigned int buffer_size = MAXDATASIZE;
 
     struct addrinfo hints, *server_info, *pointer;
-    int error;
     char ip_string[INET6_ADDRSTRLEN];
-
-    int64_t i, num_entries;
+    int error;
 
     if (argc != 2) {
 
@@ -144,11 +141,17 @@ int main (int argc, char *argv[]) {
     // Conectou, nao precisa dessas informacoes
     freeaddrinfo(server_info);
 
-    while((num_bytes = recv_msg(socketfd, &buffer, &buffer_size)) > 0) {
+    while((num_bytes = recv_msg(socketfd)) > 0) {
 
-        fgets(buffer, MAXDATASIZE, stdin);
-        buffer[strlen(buffer) - 1] = 0;
-        send(socketfd, buffer, strlen(buffer), 0);
+        if (strcmp(buffer, "sair") == 0)
+            shutdown(socketfd, SHUT_RDWR);
+
+        else {
+
+            fgets(buffer, MAXDATASIZE, stdin);
+            buffer[strlen(buffer) - 1] = 0;
+            send(socketfd, buffer, strlen(buffer), 0);
+        }
     }
 
     if (num_bytes == -1) {
