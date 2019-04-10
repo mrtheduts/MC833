@@ -16,6 +16,7 @@ $ ./setup_project.sh <numero-do-projeto>
 ```
 Após a execução, os binários do servidor e do cliente (`servidor` e `cliente`, respectivamente) se encontrarão na pasta raiz do projeto e podem ser executados localmente da seguinte maneira:
 `$ ./servidor`
+
 `$ ./cliente localhost`
 
 ## Parando os Containers
