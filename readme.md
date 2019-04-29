@@ -29,6 +29,6 @@ $ docker container rm lab_redes_mongodb_1
 
 ## Todo
 - [X] Terminar o Readme
-- [ ] Fazer o Projeto 1
+- [X] Fazer o Projeto 1
 - [ ] Fazer o Projeto 2
 - [ ] Fazer o Projeto 3
