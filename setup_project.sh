@@ -29,7 +29,7 @@ cmake ..
 cmake --build .
 
 echo ""
-echo "Copiando os executaveis aqui para maior conveniencia..."
+echo "Copiando os executaveis na raiz do projeto para maior conveniencia..."
 cp ./bin/* $ROOT_PROJECT_FOLDER
 
 echo "Verificando os containers docker..."

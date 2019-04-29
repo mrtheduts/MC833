@@ -1,7 +1,6 @@
 /* Nome: Eduardo Moreira Freitas de Souza   */
 /* RA: 166779                               */
 /* Projeto 1 - MC833                        */
-/* Mandar para edmundo@ic.unicamp.br        */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,6 +17,7 @@
 #include <mongoc/mongoc.h>
 #include <inttypes.h>
 #include <math.h>
+#include <sys/time.h>
 
 #define PORT "22222"  // Porta escolhida para a utilizacao do servidor
 
@@ -44,26 +44,8 @@
 #define OPT_7           17
 
 
-void send_msg_inside (int fd, char *msg) {
 
-    unsigned int size_msg;
-    char msg_with_size[10] = {0};
-
-    size_msg = strlen(msg);
-    sprintf(msg_with_size, "%u", size_msg);
-    printf("msg_with_size: |%s|\n", msg_with_size);
-
-    if (send(fd, msg_with_size, strlen(msg_with_size), 0) == -1)
-            perror("send");
-
-    printf("Msg: ========================================================= \n|%s|\n============================================================\n", msg);
-
-    if (send(fd, msg, size_msg, 0) == -1)
-            perror("send");
-
-}
-
-    size_t digit_count(int num) {
+size_t digit_count(int num) {
     return snprintf(NULL, 0, "%d", num);
 }
 
@@ -92,7 +74,8 @@ void send_msg (int fd, char *msg) {
             send(fd, pointer, i, 0);
     }
 
-    printf("Tudo mandado!\n");
+    free(buffer);
+
 }
 
 char *set_initial_msg (int *state) {
@@ -128,7 +111,7 @@ void my_strcat (char **msg, char *str, unsigned int *msg_size) {
 
 }
 
-void HandleClient (int socketfd, mongoc_collection_t *collection) {
+void HandleClient (int socketfd, mongoc_collection_t *collection, FILE *log) {
 
     int num_bytes, state = DISCONNECTED;
     unsigned int msg_size = MAXDATASIZE;
@@ -139,6 +122,9 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
     const bson_t *doc;
     bool found;
 
+    struct timeval tv1, tv2;
+    char operation;
+
     msg = (char *)calloc(MAXDATASIZE, sizeof(char));
 
     strcpy(msg, "\nBem-vind* ao RedesBook! Faca seu login para continuar:\n\nemail: \0");
@@ -147,10 +133,9 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
     while ((num_bytes = recv(socketfd, buffer, MAXDATASIZE-1, 0)) > 0) {
 
+        gettimeofday(&tv1, NULL);
+        operation = buffer[0];
         buffer[num_bytes] = 0;
-        printf("Estado: %d\n", state);
-        printf("Recebi isso: |%s|\n", buffer);
-
         found = false;
 
         if (state == DISCONNECTED) {
@@ -164,8 +149,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
         else if (state == VERIFY_PASSWD) {
 
-            printf("Esse eh o email: |%s|\n", email);
-            printf("Essa eh a senha: |%s|\n", buffer);
             query = bson_new();
             BSON_APPEND_UTF8 (query, "Email", email);
             BSON_APPEND_UTF8 (query, "senha", buffer);
@@ -178,8 +161,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
                 found = true;
                 str = bson_as_canonical_extended_json (doc, NULL);
-                printf("Combinacao de %s\n", str);
-
                 bson_free(str);
             }
 
@@ -203,7 +184,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
         }
         else if (strcmp(buffer, "sair") == 0) { 
 
-            printf("Opcao escolhida: sair\n");
             strcpy(msg, "Ate mais! :)\n\0");
             state = OPT_7;
             send_msg(socketfd, msg);
@@ -213,21 +193,18 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
             if (buffer[0] == '1') { 
 
-                printf("Opcao escolhida: 1\n");
                 strcpy(msg, "Escreva o curso que deseja saber: \0");
                 state = OPT_1;
                 send_msg(socketfd, msg);
             }
             else if (buffer[0] == '2') { 
 
-                printf("Opcao escolhida: 2\n");
                 strcpy(msg, "Escreva a cidade: \0");
                 state = OPT_2;
                 send_msg(socketfd, msg);
             }
             else if (buffer[0] == '3') { 
 
-                printf("Opcao escolhida: 3\n");
                 strcpy(msg, "Escreva o local de trabalho: \0");
                 state = OPT_3;
                 send_msg(socketfd, msg);
@@ -239,26 +216,22 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             }
             else if (buffer[0] == '4') { 
 
-                printf("Opcao escolhida: 4\n");
                 strcpy(msg, "Escreva o email: \0");
                 state = OPT_4;
                 send_msg(socketfd, msg);
             }
             else if (buffer[0] == '5') { 
 
-                printf("Opcao escolhida: 5\n");
                 state = OPT_5;
             }
             else if (buffer[0] == '6') { 
 
-                printf("Opcao escolhida: 6\n");
                 strcpy(msg, "Escreva o email da pessoa: \0");
                 state = OPT_6;
                 send_msg(socketfd, msg);
             }
             else {
 
-                printf("Opcao invalida!\n");
                 strcpy(msg, "Opcao invalida!\n\0");
                 my_strcat(&msg, set_initial_msg(&state), &msg_size);
                 send_msg(socketfd, msg);
@@ -343,7 +316,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
         else if (state ==OPT_3) {
 
             bson_t *update;
-            printf("Email: |%s|\nLocal: %s\nOcupacao: %s\n", email, local, buffer);
 
             opts = BCON_NEW ("projection", "{",
                                 "_id", BCON_BOOL(false),
@@ -353,12 +325,6 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
             BSON_APPEND_UTF8 (query, "Email", email);
             cursor = mongoc_collection_find_with_opts(collection, query,
                                                       opts, NULL);
-
-            while (mongoc_cursor_next(cursor, &doc)) {
-
-                printf("Achei: %s\n", bson_as_canonical_extended_json (doc, NULL));
-
-            }
 
             mongoc_cursor_destroy (cursor);
 
@@ -480,7 +446,12 @@ void HandleClient (int socketfd, mongoc_collection_t *collection) {
 
             send_msg(socketfd, msg);
         }
+
+        gettimeofday(&tv2, NULL);
+        fprintf(log, "%c -> %ld\n", operation, (tv2.tv_sec - tv1.tv_sec)*1000000 + (long)(tv2.tv_usec - tv1.tv_usec));
     }
+
+    free(msg);
 }
 
 void SignalChildHandler (int s) {
@@ -504,7 +475,7 @@ void *get_in_addr(struct sockaddr *sa)
 	return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-int main () {
+int main (int argc, char *argv[]) {
 
     // Necessario para o banco de dados
     const char *uri_string = "mongodb://localhost:27017";
@@ -524,6 +495,17 @@ int main () {
     int yes = 1;
     char ip_string[INET6_ADDRSTRLEN];
     struct sigaction signal_action;
+
+    FILE *log;
+
+    if (argc != 2) {
+
+        fprintf(stderr, "uso: ./servidor <nome do arquivo de log>\n");
+        exit(1);
+    }
+
+
+    log = fopen(argv[1], "w");
 
     // Inicializacao do banco de dados
     printf("Iniciando mongoc...\n");
@@ -633,7 +615,7 @@ int main () {
 
             close(socketfd); // filho nao precisa escutar a socket
 
-            HandleClient(new_fd, collection);
+            HandleClient(new_fd, collection, log);
 
             printf("Servidor: conexao de %s terminada\n", ip_string);
 
@@ -645,6 +627,8 @@ int main () {
     }
 
     close(socketfd);
+
+    fclose(log);
 
     mongoc_collection_destroy (collection);
     mongoc_database_destroy (database);

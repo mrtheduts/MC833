@@ -1,7 +1,6 @@
 /* Nome: Eduardo Moreira Freitas de Souza   */
 /* RA: 166779                               */
 /* Projeto 1 - MC833                        */
-/* Mandar para edmundo@ic.unicamp.br        */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +14,7 @@
 
 #include <arpa/inet.h>
 
-#include <time.h>
+#include <sys/time.h>
 
 #define PORT "22222" // A porta utilizada na conexao
 
@@ -87,9 +86,12 @@ int main (int argc, char *argv[]) {
     char ip_string[INET6_ADDRSTRLEN];
     int error;
 
-    if (argc != 2) {
+    struct timeval tv1, tv2;
+    FILE *log = fopen(argv[2], "w");
 
-        fprintf(stderr, "uso: hostname do servidor\n");
+    if (argc != 3) {
+
+        fprintf(stderr, "uso: ./cliente <hostname do servidor> <nome do arquivo de log>\n");
         exit(1);
     }
 
@@ -143,6 +145,9 @@ int main (int argc, char *argv[]) {
 
     while((num_bytes = recv_msg(socketfd)) > 0) {
 
+        gettimeofday(&tv2, NULL);
+        fprintf(log, "%s -> %ld\n", buffer, (tv2.tv_sec - tv1.tv_sec)*1000000 + (long)(tv2.tv_usec - tv1.tv_usec));
+
         if (strcmp(buffer, "sair") == 0)
             shutdown(socketfd, SHUT_RDWR);
 
@@ -151,6 +156,8 @@ int main (int argc, char *argv[]) {
             fgets(buffer, MAXDATASIZE, stdin);
             buffer[strlen(buffer) - 1] = 0;
             send(socketfd, buffer, strlen(buffer), 0);
+
+            gettimeofday(&tv1, NULL);
         }
     }
 
@@ -163,6 +170,7 @@ int main (int argc, char *argv[]) {
     printf("cliente: conexao encerrada pelo servidor\n");
 
     close(socketfd);
+    fclose(log);
 
     return 0;
 }
