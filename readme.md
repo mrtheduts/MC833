@@ -16,12 +16,12 @@ $ ./setup_project.sh <numero-do-projeto>
 ```
 Após a execução, os binários do servidor e do cliente (`servidor` e `cliente`, respectivamente) se encontrarão na pasta raiz do projeto e podem ser executados localmente da seguinte maneira:
 
-`$ ./servidor`
+`$ ./servidor log_tempo_servidor.txt`
 
-`$ ./cliente localhost`
+`$ ./cliente localhost log_tempo_cliente.txt`
 
 ## Parando os Containers
-Para interromper a execução dos containers e apagar as imagens gerada pelo `docker-compose`, basta executar:
+Para interromper a execução dos containers e apagá-los, basta executar:
 ```
 $ docker container stop lab_redes_mongodb_1
 $ docker container rm lab_redes_mongodb_1
