@@ -45,19 +45,21 @@ public class Client {
 
             do {
 
+                System.out.println(INIT_MSG);
                 String msgToServer;
                 Scanner sc = new Scanner(System.in);
 
                 op = sc.next().charAt(0);
+
 
                 System.out.println("Você escolheu a opção " + op);
 
                 if (op == '1') {
 
 
-                    System.out.println("Digite a cidade: ");
+                    System.out.println("Digite o curso: ");
                     msgToServer = sc.next();
-                    System.out.println(worker.list_all_city(msgToServer));
+                    System.out.println(worker.list_name_course(msgToServer));
                 }
                 else if (op == '2') {
 
@@ -70,10 +72,13 @@ public class Client {
                     System.out.println("Digite o email: ");
                     msgToServer = sc.next();
 
-                    System.out.println("Digite a experiencia: ");
-                    String exp_to_add = sc.next();
+                    System.out.println("Digite o local: ");
+                    String work_location = sc.next();
 
-                    System.out.println(worker.add_exp(msgToServer, exp_to_add));
+                    System.out.println("Digite o cargo: ");
+                    String job = sc.next();
+
+                    System.out.println(worker.add_exp(msgToServer, work_location, job));
                 }
                 else if (op == '4') {
 

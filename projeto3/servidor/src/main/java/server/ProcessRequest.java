@@ -15,6 +15,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
+import com.mongodb.BasicDBList;
 
 public class ProcessRequest extends UnicastRemoteObject
             implements ProcessRequestInterface {
@@ -37,35 +38,102 @@ public class ProcessRequest extends UnicastRemoteObject
                 this.collection = db.getCollection("pessoas");
             }
 
-            public String list_all_city(String city) throws RemoteException{
+            public String list_name_course(String course) throws RemoteException{
 
-                DBCursor results = collection.find(new BasicDBObject("Residencia", city));
-                return "list_all_city";
+                DBCursor results = collection.find(new BasicDBObject("Formacao Academica", course));
+                String output = "{[";
+
+                for (DBObject result : results) {
+
+                    output += (result.get("Nome Completo").toString()) + ",";
+                }
+
+                output = output.substring(0, output.length() - 1);
+                output += "]}";
+
+                return output;
             }
 
             public String list_hab_city(String city) throws RemoteException{
 
-                return "list_hab_city";
+                DBCursor results = collection.find(new BasicDBObject("Residencia", city));
+                String output = "{[";
+
+                for (DBObject result : results) {
+
+                    output += (result.get("Habilidades").toString()) + ",";
+                }
+                output = output.substring(0, output.length() - 1);
+                output += "]}";
+                return output;
             }
 
-            public String add_exp(String email, String exp_to_add) throws RemoteException{
+            public String add_exp(String email, String work_location, String job) throws RemoteException{
 
-                return "Experiencia adicionada com sucesso!";
+                DBCursor results = collection.find(new BasicDBObject("Email", email));
+                DBObject person = results.one();
+
+                BasicDBList exp = (BasicDBList)person.get("Experiencia");
+
+                BasicDBObject new_exp = new BasicDBObject("Local", work_location);
+                new_exp.put("Cargo", job);
+
+                exp.add(0, new_exp);
+
+                person.put("Experiencia", exp);
+                System.out.println(person.toString());
+
+                collection.update(new BasicDBObject("Email", email), person);
+
+                return "Experiência adicionada!";
             }
 
             public String list_exp_email(String email) throws RemoteException{
 
-                return "list_exp_email";
+                DBCursor results = collection.find(new BasicDBObject("Email", email));
+                String output = "{[";
+
+                for (DBObject result : results) {
+
+                    output += (result.get("Experiencia").toString()) + ",";
+                }
+                output = output.substring(0, output.length() - 1);
+                output += "]}";
+                return output;
             }
 
             public String list_all() throws RemoteException{
 
-                return "list_all";
+                DBObject fields = new BasicDBObject("_id", 0);
+                fields.put("senha", 0);
+                DBCursor results = collection.find(new BasicDBObject(), fields);
+
+                String output = "{[";
+
+                for (DBObject result : results) {
+
+                    output += (result.toString()) + ",";
+                }
+                output = output.substring(0, output.length() - 1);
+                output += "]}";
+                return output;
             }
 
             public String list_all_email (String email) throws RemoteException{
 
-                return "list_all_email";
+                DBObject fields = new BasicDBObject("_id", 0);
+                fields.put("senha", 0);
+                DBCursor results = collection.find(new BasicDBObject("Email", email), fields);
+
+                String output = "{[";
+
+                for (DBObject result : results) {
+
+                    output += (result.toString()) + ",";
+                }
+                output = output.substring(0, output.length() - 1);
+                output += "]}";
+                return output;
             }
 
 }

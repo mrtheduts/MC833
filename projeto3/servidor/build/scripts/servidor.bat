@@ -79,7 +79,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\servidor.jar;%APP_HOME%\lib\mongo-java-driver-2.13.3.jar;%APP_HOME%\lib\bson-2.13.3.jar
+set CLASSPATH=%APP_HOME%\lib\servidor.jar;%APP_HOME%\lib\mongo-java-driver-2.13.3.jar;%APP_HOME%\lib\bson-2.13.3.jar;%APP_HOME%\lib\commons-net-20030805.205232.jar
 
 @rem Execute servidor
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SERVIDOR_OPTS%  -classpath "%CLASSPATH%" server.Server %CMD_LINE_ARGS%
