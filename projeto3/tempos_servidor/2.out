@@ -1,0 +1,47 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+java RMI registry created.
+Server is ready at:rmi://0.0.0.0:1099/Worker
+|31323892
+
+|2235042
+
+|2220517
+
+|2203465
+
+|1813484
+
+|1690844
+
+|2163089
+
+|2363054
+
+|2244725
+
+|2279313
+
+|1759060
+
+|2190109
+
+|1867564
+
+|1986360
+
+|2248282
+
+|1578103
+
+|1978760
+
+|1715696
+
+|2037027
+
+|1993023
+

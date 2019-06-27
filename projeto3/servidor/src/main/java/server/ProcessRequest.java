@@ -24,6 +24,8 @@ public class ProcessRequest extends UnicastRemoteObject
             DB db;
             DBCollection collection;
 
+            long t_start, t_finish;
+
             public ProcessRequest () throws RemoteException {
 
                 try {
@@ -38,7 +40,21 @@ public class ProcessRequest extends UnicastRemoteObject
                 this.collection = db.getCollection("pessoas");
             }
 
+            private void set_start_time(){
+
+                this.t_start = System.nanoTime();
+            }
+
+            private void set_finish_time(){
+
+                this.t_finish = System.nanoTime();
+
+                System.out.println("|" + (this.t_finish - this.t_start) + "\n");
+            }
+
             public String list_name_course(String course) throws RemoteException{
+
+                set_start_time();
 
                 DBCursor results = collection.find(new BasicDBObject("Formacao Academica", course));
                 String output = "{[";
@@ -51,10 +67,14 @@ public class ProcessRequest extends UnicastRemoteObject
                 output = output.substring(0, output.length() - 1);
                 output += "]}";
 
+                set_finish_time();
+
                 return output;
             }
 
             public String list_hab_city(String city) throws RemoteException{
+
+                set_start_time();
 
                 DBCursor results = collection.find(new BasicDBObject("Residencia", city));
                 String output = "{[";
@@ -65,10 +85,15 @@ public class ProcessRequest extends UnicastRemoteObject
                 }
                 output = output.substring(0, output.length() - 1);
                 output += "]}";
+
+                set_finish_time();
+
                 return output;
             }
 
             public String add_exp(String email, String work_location, String job) throws RemoteException{
+
+                set_start_time();
 
                 DBCursor results = collection.find(new BasicDBObject("Email", email));
                 DBObject person = results.one();
@@ -81,14 +106,18 @@ public class ProcessRequest extends UnicastRemoteObject
                 exp.add(0, new_exp);
 
                 person.put("Experiencia", exp);
-                System.out.println(person.toString());
+                // System.out.println(person.toString());
 
                 collection.update(new BasicDBObject("Email", email), person);
+
+                set_finish_time();
 
                 return "Experiência adicionada!";
             }
 
             public String list_exp_email(String email) throws RemoteException{
+
+                set_start_time();
 
                 DBCursor results = collection.find(new BasicDBObject("Email", email));
                 String output = "{[";
@@ -99,10 +128,15 @@ public class ProcessRequest extends UnicastRemoteObject
                 }
                 output = output.substring(0, output.length() - 1);
                 output += "]}";
+
+                set_finish_time();
+
                 return output;
             }
 
             public String list_all() throws RemoteException{
+
+                set_start_time();
 
                 DBObject fields = new BasicDBObject("_id", 0);
                 fields.put("senha", 0);
@@ -116,10 +150,15 @@ public class ProcessRequest extends UnicastRemoteObject
                 }
                 output = output.substring(0, output.length() - 1);
                 output += "]}";
+
+                set_finish_time();
+
                 return output;
             }
 
             public String list_all_email (String email) throws RemoteException{
+
+                set_start_time();
 
                 DBObject fields = new BasicDBObject("_id", 0);
                 fields.put("senha", 0);
@@ -133,6 +172,9 @@ public class ProcessRequest extends UnicastRemoteObject
                 }
                 output = output.substring(0, output.length() - 1);
                 output += "]}";
+
+                set_finish_time();
+
                 return output;
             }
 

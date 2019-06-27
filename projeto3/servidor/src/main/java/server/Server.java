@@ -11,7 +11,7 @@ public class Server {
 
     public static void main (String[] argv) throws RemoteException {
 
-        // System.setProperty("java.rmi.server.hostname","192.168.0.111");
+            System.setProperty("java.rmi.server.hostname","177.220.84.244");
 
         try {
             System.setProperty("java.security.policy", "/home/mrtheduts/Git/unicamp/mc833/projeto3/servidor/src/main/java/security.policy");

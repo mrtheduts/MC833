@@ -1,0 +1,67 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+java RMI registry created.
+Server is ready at:rmi://0.0.0.0:1099/Worker
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|105511061
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|7913755
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|7443192
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|7036642
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|6109398
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|15608006
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|8679375
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|10717010
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|27091466
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|13614631
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|19404763
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|6454846
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|10269860
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|4398907
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|2798298
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|2660700
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|2476195
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c00f"} , "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "senha" : "plaintext1" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]}
+|1651163
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c010"} , "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "senha" : "plaintext3" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]}
+|1904243
+
+{ "_id" : { "$oid" : "5d0fa1feb0a347940df9c011"} , "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "senha" : "plaintext2" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}
+|1665969
+

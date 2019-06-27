@@ -28,11 +28,13 @@ public class Client {
         System.setProperty("java.security.policy", "security.policy");
         System.setSecurityManager(new SecurityManager());
 
-        String remoteHostName = "casawje.ddns.net";
+        String remoteHostName = args[0];
         int remotePort = 1099;
         String connectLocation = "rmi://" + remoteHostName + ":" + remotePort + "/Worker";
 
         ProcessRequestInterface worker = null;
+
+        Scanner sc = new Scanner(System.in);
 
         try {
             System.out.println("Connecting to client at :" + connectLocation);
@@ -43,11 +45,14 @@ public class Client {
 
             char op;
 
+
             do {
+
+                long t_start;
+                long t_finish;
 
                 System.out.println(INIT_MSG);
                 String msgToServer;
-                Scanner sc = new Scanner(System.in);
 
                 op = sc.next().charAt(0);
 
@@ -59,13 +64,22 @@ public class Client {
 
                     System.out.println("Digite o curso: ");
                     msgToServer = sc.next();
+
+                    t_start = System.nanoTime();
+
                     System.out.println(worker.list_name_course(msgToServer));
+
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 else if (op == '2') {
 
                     System.out.println("Digite a cidade: ");
                     msgToServer = sc.next();
+                    t_start = System.nanoTime();
                     System.out.println(worker.list_hab_city(msgToServer));
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 else if (op == '3') {
 
@@ -78,27 +92,39 @@ public class Client {
                     System.out.println("Digite o cargo: ");
                     String job = sc.next();
 
+                    t_start = System.nanoTime();
                     System.out.println(worker.add_exp(msgToServer, work_location, job));
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 else if (op == '4') {
 
                     System.out.println("Digite o email: ");
                     msgToServer = sc.next();
+                    t_start = System.nanoTime();
                     System.out.println(worker.list_exp_email(msgToServer));
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 else if (op == '5') {
 
+                    t_start = System.nanoTime();
                     System.out.println(worker.list_all());
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 else if (op == '6') {
 
                     System.out.println("Digite o email: ");
                     msgToServer = sc.next();
+                    t_start = System.nanoTime();
                     System.out.println(worker.list_all_email(msgToServer));
+                    t_finish = System.nanoTime();
+                    System.out.println("Consulta realizada em:\n" + "|" + (t_finish - t_start));
                 }
                 if (op == '7') {
 
-                    System.out.println("É isso aí.");
+                    System.out.println("Volte sempre :)");
                 }
 
             } while (op != '7');
