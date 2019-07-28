@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-if echo $1 | egrep -q '^[1-1]+$'; then
+if echo $1 | egrep -q '^[1-2]+$'; then
     echo "Acessando o projeto $1..."
 else
     echo "Parametro incorreto. Use como argumento apenas o numero do projeto que deseja executar."

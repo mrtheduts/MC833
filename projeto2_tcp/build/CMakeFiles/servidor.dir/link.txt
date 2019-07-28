@@ -1,0 +1,1 @@
+/usr/bin/cc -Wall -Wextra -Werror   CMakeFiles/servidor.dir/src/servidor.c.o  -o bin/servidor /usr/lib/libmongoc-1.0.so /usr/lib/libbson-1.0.so /usr/lib/libsasl2.so /usr/lib/libssl.so /usr/lib/libcrypto.so -lrt -lresolv /usr/lib/libsnappy.so /usr/lib/libicuuc.so 

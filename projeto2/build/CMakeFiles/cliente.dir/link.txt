@@ -1,0 +1,1 @@
+/usr/bin/cc -Wall -Wextra -Werror   CMakeFiles/cliente.dir/src/cliente.c.o  -o bin/cliente 

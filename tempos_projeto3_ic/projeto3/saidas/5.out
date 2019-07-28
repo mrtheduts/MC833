@@ -1,0 +1,356 @@
+Connecting to client at :rmi://177.220.84.244:1099/Worker
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|48131630
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|11210343
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|12981124
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|19845802
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|13529342
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|12513802
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|11369053
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|9306578
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|9175479
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|10062626
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7373144
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|11260161
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|9640590
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|11069154
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7596919
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|9560797
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7792781
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|5837888
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7676168
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 5
+{[{ "Nome Completo" : { "nome" : "Lucas" , "sobrenome" : "Teixeira Amaral"} , "Email" : "lucas.amaral@globo.com" , "Residencia" : "Pereiras" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Parapsicologia" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Professor"} , { "Local" : "Sefit" , "Cargo" : "Estagiario"} , { "Local" : "Bolotus" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Pedro" , "Sobrenome" : "Ducati Amaral"} , "Email" : "pedro.amaral@gmail.com" , "Residencia" : "Campinas" , "Formacao Academica" : "Psicologia" , "Habilidades" : "Psicanalise" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Unicamp" , "Cargo" : "Aluno"} , { "Local" : "Jatemp" , "Cargo" : "Estagiario"} , { "Local" : "Letop" , "Cargo" : "Psicologo"}]},{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7766603
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 7
+Volte sempre :)

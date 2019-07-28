@@ -1,0 +1,4 @@
+/home/mrtheduts/Git/unicamp/mc833/projeto1/build/CMakeFiles/edit_cache.dir
+/home/mrtheduts/Git/unicamp/mc833/projeto1/build/CMakeFiles/servidor.dir
+/home/mrtheduts/Git/unicamp/mc833/projeto1/build/CMakeFiles/rebuild_cache.dir
+/home/mrtheduts/Git/unicamp/mc833/projeto1/build/CMakeFiles/cliente.dir

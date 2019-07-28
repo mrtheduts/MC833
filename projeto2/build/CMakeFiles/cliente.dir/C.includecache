@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mrtheduts/Git/unicamp/mc833/projeto2/src/cliente.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+netdb.h
+-
+sys/types.h
+-
+netinet/in.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+sys/time.h
+-
+

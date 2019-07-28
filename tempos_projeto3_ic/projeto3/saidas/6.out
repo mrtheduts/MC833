@@ -1,0 +1,376 @@
+Connecting to client at :rmi://177.220.84.244:1099/Worker
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|35870259
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|6504262
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7235708
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7271938
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7347868
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|6919783
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7268043
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7116481
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|15511660
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|6662296
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|7059284
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|10799332
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|6847290
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|52898002
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|8713171
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|4073360
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|3348159
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|3719770
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|4282356
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 6
+Digite o email: 
+{[{ "Nome Completo" : { "Nome" : "Helena" , "Sobrenome" : "Machado Teixeira"} , "Email" : "helena.teixeira@hotmail.com" , "Residencia" : "Rio Branco" , "Formacao Academica" : "Linguistica" , "Habilidades" : "Ingles Antigo" , "Experiencia" : [ { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Unicamp" , "Cargo" : "Aluna"} , { "Local" : "Editora Baz" , "Cargo" : "Estagiaria"}]}]}
+Consulta realizada em:
+|4955961
+
+Olá! As opções disponíveis são:
+
+(1) Listar todas as pessoas formadas em um determinado curso
+(2) Listar as habilidades dos perfis que moram em uma determinada cidade
+(3) Acrescentar uma nova experiẽncia em um perfil
+(4) Dado o email de um perfil, retorna sua experiência
+(5) Lista todas as informações de todos os perfis
+(6) Dado o email de um perfil, retorna suas informações
+
+(7) Sair
+
+
+Você escolheu a opção 7
+Volte sempre :)

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/mrtheduts/Git/unicamp/mc833/projeto1",
+  "command": "/usr/bin/cc  -I/home/mrtheduts/Git/unicamp/mc833/projeto1 -I/usr/include/libmongoc-1.0 -I/usr/include/libbson-1.0  -Wall -Wextra -Werror   -o CMakeFiles/servidor.dir/src/servidor.c.o   -c /home/mrtheduts/Git/unicamp/mc833/projeto1/src/servidor.c",
+  "file": "/home/mrtheduts/Git/unicamp/mc833/projeto1/src/servidor.c"
+},
+{
+  "directory": "/home/mrtheduts/Git/unicamp/mc833/projeto1",
+  "command": "/usr/bin/cc  -I/home/mrtheduts/Git/unicamp/mc833/projeto1  -Wall -Wextra -Werror   -o CMakeFiles/cliente.dir/src/cliente.c.o   -c /home/mrtheduts/Git/unicamp/mc833/projeto1/src/cliente.c",
+  "file": "/home/mrtheduts/Git/unicamp/mc833/projeto1/src/cliente.c"
+}
+]
